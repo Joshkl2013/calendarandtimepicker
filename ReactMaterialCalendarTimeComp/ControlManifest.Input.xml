@@ -18,25 +18,25 @@
       -->
     </external-service-usage>
     <!-- property node identifies a specific, configurable piece of data that the control expects from CDS -->
-    <property name="BorderColor"      display-name-key="BorderColor_Display_Key"      description-key="BorderColor_Desc_Key"      of-type="SingleLine.Text"       usage="bound" required="true" default-value="#000000"/>
-    <property name="BorderHoverColor" display-name-key="BorderHoverColor_Display_Key" description-key="BorderHoverColor_Desc_Key" of-type="SingleLine.Text"       usage="bound" required="true" default-value="#444444"/>
-    <property name="BorderPressedColor" display-name-key="BorderPressedColor_Display_Key" description-key="BorderPressedColor_Desc_Key" of-type="SingleLine.Text" usage="bound" required="true" default-value="#222222"/>
-    <property name="BorderRadius"     display-name-key="BorderRadius_Display_Key"     description-key="BorderRadius_Desc_Key"     of-type="Decimal"               usage="bound" required="true" default-value="5"/>
-    <property name="BorderThickness"  display-name-key="BorderThickness_Display_Key"  description-key="BorderThickness_Desc_Key"  of-type="Decimal"               usage="bound" required="true" default-value="2"/>
-    <property name="DatePickerFill"   display-name-key="DatePickerFill_Display_Key"   description-key="DatePickerFill_Desc_Key"   of-type="SingleLine.Text"       usage="bound" required="true" default-value="#6124e5"/>
-    <property name="DatePickerColor"  display-name-key="DatePickerColor_Display_Key"  description-key="DatePickerColor_Desc_Key"  of-type="SingleLine.Text"       usage="bound" required="true" default-value="#000000"/>
-    <property name="DatePickerCalendarFill" display-name-key="DatePickerCalendarFill_Display_Key" description-key="DatePickerCalendarFill_Desc_Key" of-type="SingleLine.Text" usage="bound" required="true" default-value="#ffffff"/>
-    <property name="DisplayMode"      display-name-key="DisplayMode_Display_Key"      description-key="DisplayMode_Desc_Key"      of-type="SingleLine.Text"       usage="bound" required="true" default-value="Edit"/>
-    <property name="IconFill"         display-name-key="IconFill_Display_Key"         description-key="IconFill_Desc_Key"         of-type="SingleLine.Text"       usage="bound" required="true" default-value="#6124e5"/>
-    <property name="InputPlaceholder" display-name-key="InputPlaceholder_Display_Key" description-key="InputPlaceholder_Desc_Key" of-type="SingleLine.Text"       usage="bound"                 default-value="Placeholder"/>
-    <property name="LabelText"        display-name-key="Label_Display_Key"            description-key="Label_Desc_Key_Desc_Key"   of-type="SingleLine.Text"       usage="bound" required="true" default-value= "Date Picker"/>
-    <property name="SelectedDate"     display-name-key="Date_Display_Key"             description-key="Date_Desc_Key_Desc_Key"    of-type="DateAndTime.DateOnly"  usage="bound"                 default-value= ""/>
-    <property name="Size"             display-name-key="Size_Display_Key"             description-key="Size_Desc_Key"             of-type="Decimal"               usage="bound" required="true" default-value="10"/>
-    <property name="TextboxColor"     display-name-key="TextboxColor_Display_Key"     description-key="TextboxColor_Desc_Key"     of-type="SingleLine.Text"       usage="bound" required="true" default-value="#000000"/>
-    <property name="TextboxHoverFill" display-name-key="TextboxHoverFill_Display_Key" description-key="TextboxHoverFill_Desc_Key" of-type="SingleLine.Text"       usage="bound" required="true" default-value="#ffffff"/>
-    <property name="TextboxHeight"    display-name-key="TextboxHeight_Display_Key"    description-key="TextboxHeight_Desc_Key"    of-type="Decimal"               usage="bound" required="true" default-value="50"/>
-    <property name="TextboxPressedFill" display-name-key="TextboxPressedFill_Display_Key" description-key="TextboxPressedFill_Desc_Key" of-type="SingleLine.Text" usage="bound" required="true" default-value="#ffffff"/>
-    <property name="TextboxFill"      display-name-key="TextboxFill_Display_Key"      description-key="TextboxFill_Desc_Key"      of-type="SingleLine.Text"       usage="bound" required="true" default-value="#ffffff"/>
+    <property name="BorderColor"      display-name-key="Border Color"      description-key="BorderColor"      of-type="SingleLine.Text"       usage="bound" required="true" default-value="#000000"/>
+    <property name="BorderHoverColor" display-name-key="Border Hover Color" description-key="BorderHoverColor" of-type="SingleLine.Text"       usage="bound" required="true" default-value="#444444"/>
+    <property name="BorderPressedColor" display-name-key="Border Pressed Color" description-key="BorderPressedColor" of-type="SingleLine.Text" usage="bound" required="true" default-value="#222222"/>
+    <property name="BorderRadius"     display-name-key="Border Radius"     description-key="BorderRadius"     of-type="Decimal"               usage="bound" required="true" default-value="5"/>
+    <property name="BorderThickness"  display-name-key="Border Thickness"  description-key="BorderThickness"  of-type="Decimal"               usage="bound" required="true" default-value="2"/>
+    <property name="DatePickerFill"   display-name-key="Date Picker Fill"   description-key="Header fill color of the date picker"   of-type="SingleLine.Text"       usage="bound" required="true" default-value="#6124e5"/>
+    <property name="DatePickerColor"  display-name-key="Date Picker Color"  description-key="Header text color of the date picker"  of-type="SingleLine.Text"       usage="bound" required="true" default-value="#000000"/>
+    <property name="DatePickerCalendarFill" display-name-key="Date Picker Calendar Fill" description-key="Fill of the date picker where the calendar is" of-type="SingleLine.Text" usage="bound" required="true" default-value="#ffffff"/>
+    <property name="DisplayMode"      display-name-key="Display Mode"      description-key="DisplayMode"      of-type="SingleLine.Text"       usage="bound" required="true" default-value="Edit"/>
+    <property name="IconFill"         display-name-key="Icon Fill"         description-key="IconFill"         of-type="SingleLine.Text"       usage="bound" required="true" default-value="#6124e5"/>
+    <property name="InputPlaceholder" display-name-key="Input Placeholder" description-key="InputPlaceholder" of-type="SingleLine.Text"       usage="bound"                 default-value="Placeholder"/>
+    <property name="LabelText"        display-name-key="Label"            description-key="Label"   of-type="SingleLine.Text"       usage="bound" required="true" default-value= "Date Picker"/>
+    <property name="LabelSize"        display-name-key="Label Size"        description-key="LabelSize"        of-type="Decimal"               usage="bound" required="true" default-value="10"/>
+    <property name="SelectedDate"     display-name-key="Date"             description-key="Date"    of-type="DateAndTime.DateOnly"  usage="bound"                 default-value= ""/>
+    <property name="Size"             display-name-key="Size"             description-key="Size"             of-type="Decimal"               usage="bound" required="true" default-value="10"/>
+    <property name="TextboxColor"     display-name-key="Textbox Color"     description-key="TextboxColor"     of-type="SingleLine.Text"       usage="bound" required="true" default-value="#000000"/>
+    <property name="TextboxHoverFill" display-name-key="Textbox Hover Fill" description-key="TextboxHoverFill" of-type="SingleLine.Text"       usage="bound" required="true" default-value="#ffffff"/>
+    <property name="TextboxPressedFill" display-name-key="Textbox Pressed Fill" description-key="TextboxPressedFill" of-type="SingleLine.Text" usage="bound" required="true" default-value="#ffffff"/>
+    <property name="TextboxFill"      display-name-key="Textbox Fill"      description-key="TextboxFill"      of-type="SingleLine.Text"       usage="bound" required="true" default-value="#ffffff"/>
     <!-- 
       Property node's of-type attribute can be of-type-group attribute. 
       Example:
@@ -46,7 +46,7 @@
         <type>FP</type>
         <type>Decimal</type>
       </type-group>
-      <property name="sampleProperty" display-name-key="Property_Display_Key" description-key="Property_Desc_Key" of-type-group="numbers" usage="bound" required="true" />
+      <property name="sampleProperty" display-name-key="Property" description-key="Property" of-type-group="numbers" usage="bound" required="true" />
     -->
     <resources>
       <code path="index.ts" order="1"/>

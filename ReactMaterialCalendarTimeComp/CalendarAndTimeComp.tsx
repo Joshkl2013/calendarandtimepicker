@@ -12,6 +12,9 @@ import {
   KeyboardDatePicker,
   DatePicker
 } from '@material-ui/pickers';
+import { ThreeDRotationSharp } from "@material-ui/icons";
+import { Container } from "@material-ui/core";
+import { areIntervalsOverlapping } from "date-fns/esm";
 
 export interface ICalendarAndTimeProps {
 	selectedTime?: Date;
@@ -26,6 +29,7 @@ export interface ICalendarAndTimeProps {
     pickerFill: string;
     pickerCalFill: string;
     pickerLabel: string;
+    labelSize: number;
     textboxColor: string;
     textboxHoverFill: string;
     textboxPressedFill: string;
@@ -49,6 +53,7 @@ export interface ICalendarAndTimeState extends React.ComponentState, ICalendarAn
     pickerFill: string;
     pickerCalFill: string;
     pickerLabel: string;
+    labelSize: number;
     textboxColor: string;
     textboxHoverFill: string;
     textboxPressedFill: string;
@@ -80,6 +85,7 @@ export class CalendarAndTimeComp extends React.Component<ICalendarAndTimeProps, 
             pickerFill: props.pickerFill,
             pickerCalFill: props.pickerCalFill,
             pickerLabel: props.pickerLabel,
+            labelSize: props.labelSize,
             textboxColor: props.textboxColor,
             textboxHoverFill: props.textboxHoverFill,
             textboxPressedFill: props.textboxPressedFill,
@@ -127,6 +133,7 @@ export class CalendarAndTimeComp extends React.Component<ICalendarAndTimeProps, 
                 }
           },
         overrides: {
+            //Overrides for the calendar icon on the TextField
             MuiIconButton: {
                 root:{
                     fill: this.props.iconFill
@@ -136,12 +143,14 @@ export class CalendarAndTimeComp extends React.Component<ICalendarAndTimeProps, 
                     fill: this.props.iconFill
                 }, 
             },
+            //Overrides for the DatePicker popup
             MuiPaper: {
                 root: {
                     backgroundColor: this.props.pickerCalFill
                 }
                 
             },
+            //Overrides for the TextField
             MuiOutlinedInput: {
                 root: {
                     //Change the date picker outline on hover
@@ -161,15 +170,21 @@ export class CalendarAndTimeComp extends React.Component<ICalendarAndTimeProps, 
                     "&$focused": {
                         backgroundColor: this.props.textboxPressedFill,
                     },
+                    height: ''.concat(this.props.textboxHeight.toString(),'px'), //Used to set the height to the same as the component container height
                 },
                 notchedOutline: {
 
                     borderWidth: ''.concat(this.props.borderThickness.toString(),'px'),
                     borderColor: ''.concat(this.props.borderColor,' !important'),
                     borderRadius: this.props.borderRadius,
+                    fontSize: this.props.labelSize,
                 },
             },
-            MuiTextField: {
+            //Override for the Input Label Size
+            MuiInputLabel: {
+                root: {
+                    fontSize: this.props.labelSize,
+                },
                 
             },
           },
@@ -195,9 +210,8 @@ export class CalendarAndTimeComp extends React.Component<ICalendarAndTimeProps, 
                             readOnly = {this.props.displayMode=='View'}     //If Display mode = View then turn into read only
                             disabled = {this.props.displayMode=='Disabled'} //If Display Mode = Disabled then disable
                             inputProps={
-                                {style: {fontSize: this.props.fontSize, height: this.props.textboxHeight}}
+                                {style: {fontSize: this.props.fontSize}}
                             }                                               //Changes the font size to the font size you select in PowerApps
-                            
                         />         
                     </MuiPickersUtilsProvider>
                 </ThemeProvider>

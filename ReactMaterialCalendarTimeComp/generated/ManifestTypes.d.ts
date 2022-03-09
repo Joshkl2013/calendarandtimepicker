@@ -16,11 +16,11 @@ export interface IInputs {
     IconFill: ComponentFramework.PropertyTypes.StringProperty;
     InputPlaceholder: ComponentFramework.PropertyTypes.StringProperty;
     LabelText: ComponentFramework.PropertyTypes.StringProperty;
+    LabelSize: ComponentFramework.PropertyTypes.DecimalNumberProperty;
     SelectedDate: ComponentFramework.PropertyTypes.DateTimeProperty;
     Size: ComponentFramework.PropertyTypes.DecimalNumberProperty;
     TextboxColor: ComponentFramework.PropertyTypes.StringProperty;
     TextboxHoverFill: ComponentFramework.PropertyTypes.StringProperty;
-    TextboxHeight: ComponentFramework.PropertyTypes.DecimalNumberProperty;
     TextboxPressedFill: ComponentFramework.PropertyTypes.StringProperty;
     TextboxFill: ComponentFramework.PropertyTypes.StringProperty;
 }
@@ -37,11 +37,11 @@ export interface IOutputs {
     IconFill?: string;
     InputPlaceholder?: string;
     LabelText?: string;
+    LabelSize?: number;
     SelectedDate?: Date;
     Size?: number;
     TextboxColor?: string;
     TextboxHoverFill?: string;
-    TextboxHeight?: number;
     TextboxPressedFill?: string;
     TextboxFill?: string;
 }

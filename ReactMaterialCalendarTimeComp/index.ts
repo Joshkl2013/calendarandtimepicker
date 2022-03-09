@@ -27,6 +27,7 @@ export class ReactMaterialCalendarTimeComp implements ComponentFramework.Standar
         pickerCalFill: "#ffffff",
         pickerFill: "#6124e5",
         pickerLabel: "Date Picker",
+        labelSize: 12,
         textboxColor: "#000000",
         textboxHoverFill: "#ffffff",
         textboxPressedFill: "#ffffff",
@@ -69,7 +70,6 @@ export class ReactMaterialCalendarTimeComp implements ComponentFramework.Standar
         this._context = context;
         this._container= document.createElement("div");
         this._notifyOutputChanged = notifyOutputChanged;
-
         // Add control initialization code
         this._notifyOutputChanged = notifyOutputChanged;
         //this.props.selectedTime = context.parameters.Label.raw as unknown as Date || 3;
@@ -82,16 +82,17 @@ export class ReactMaterialCalendarTimeComp implements ComponentFramework.Standar
         this.props.pickerCalFill = context.parameters.DatePickerCalendarFill.raw as string;
         this.props.pickerColor = context.parameters.DatePickerColor.raw as string;
         this.props.pickerLabel = context.parameters.LabelText.raw as string;
+        this.props.labelSize = context.parameters.LabelSize.raw as number;
         this.props.textboxColor = context.parameters.TextboxColor.raw as string;
         this.props.textboxHoverFill = context.parameters.TextboxHoverFill.raw as string;
         this.props.textboxPressedFill = context.parameters.TextboxPressedFill.raw as string;
-        this.props.textboxHeight = context.parameters.TextboxHeight.raw as number;
+        this.props.textboxHeight = context.mode.allocatedHeight as number;
         this.props.textboxFill = context.parameters.TextboxFill.raw as string;
         this.props.fontSize = context.parameters.Size.raw as number;
         this.props.iconFill = context.parameters.IconFill.raw as string;
         this.props.displayMode = context.parameters.DisplayMode.raw as string;
         this.theContainer = container;
-
+        context.mode.trackContainerResize(true);
         container.appendChild(this._container);
     }
 
@@ -102,6 +103,7 @@ export class ReactMaterialCalendarTimeComp implements ComponentFramework.Standar
      */
     public updateView(context: ComponentFramework.Context<IInputs>): void
     {
+        
         this.props.borderColor = context.parameters.BorderColor.raw as string;
         this.props.borderHoverColor = context.parameters.BorderHoverColor.raw as string;
         this.props.borderPressedColor = context.parameters.BorderPressedColor.raw as string;
@@ -111,10 +113,11 @@ export class ReactMaterialCalendarTimeComp implements ComponentFramework.Standar
         this.props.pickerCalFill = context.parameters.DatePickerCalendarFill.raw as string;
         this.props.pickerColor = context.parameters.DatePickerColor.raw as string;
         this.props.pickerLabel = context.parameters.LabelText.raw as string;
+        this.props.labelSize = context.parameters.LabelSize.raw as number;
         this.props.textboxColor = context.parameters.TextboxColor.raw as string;
         this.props.textboxHoverFill = context.parameters.TextboxHoverFill.raw as string;
         this.props.textboxPressedFill = context.parameters.TextboxPressedFill.raw as string;
-        this.props.textboxHeight = context.parameters.TextboxHeight.raw as number;
+        this.props.textboxHeight = context.mode.allocatedHeight as number;
         this.props.textboxFill = context.parameters.TextboxFill.raw as string;
         this.props.fontSize = context.parameters.Size.raw as number;
         this.props.iconFill = context.parameters.IconFill.raw as string;
